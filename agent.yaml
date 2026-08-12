@@ -10,6 +10,11 @@ identity:
   keyvault_url: "https://kv-agenticdemo-poc.vault.azure.net/"
 
 tools: []
+  - id: testtool2
+    roles:
+      - testtool2.write
+      - testtool2.read
+    apim_base_url: https://apim-agenticdemo-poc.azure-api.net/tools/testtool2
 
 evaluation:
   suite: default-strict
