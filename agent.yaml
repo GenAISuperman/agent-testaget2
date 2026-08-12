@@ -1,13 +1,13 @@
 agent:
-  id: "{{AGENT_ID}}"
-  team: "{{TEAM_NAME}}"
+  id: "testaget2"
+  team: "platform-eng"
   runtime: aks
-  interaction_model: "{{INTERACTION_MODEL}}"
-  guardrail_profile: "{{GUARDRAIL_PROFILE}}"
+  interaction_model: "standalone"
+  guardrail_profile: "moderate"
 
 identity:
-  sp_client_id: "{{SP_CLIENT_ID}}"
-  keyvault_url: "{{KEYVAULT_URL}}"
+  sp_client_id: "3b95d752-26a9-4e80-8eb9-ad65219616b1"
+  keyvault_url: "https://kv-agenticdemo-poc.vault.azure.net/"
 
 tools: []
 
@@ -22,10 +22,10 @@ evaluation:
       path: evals/datasets/golden-dataset.json
 
 output_policy:
-  violation_threshold: {{VIOLATION_THRESHOLD}}
-  window_minutes: {{WINDOW_MINUTES}}
-  action: {{OUTPUT_ACTION}}
-  notify_webhook: {{NOTIFY_WEBHOOK}}
+  violation_threshold: 5
+  window_minutes: 1
+  action: block
+  notify_webhook: 
 
 prompts:
   active_version: v1.0
